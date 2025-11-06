@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using StockInvestmentNew.Models;
 using StockInvestmentNew.Services;
-using System.Configuration;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
