@@ -1,4 +1,6 @@
+https://www.bing.com/search?qs=nm&pq=scaffold-dbcontext+for+sqli&sk=csyn1&sc=2-27&q=c%23+scaffold+dbcontext+from+sqlite&cvid=667800b501f24b1ea42bb660c3c27273&gs_lcrp=egrlzgdlkgyiaraageaybggaeeuyotigcaeqabha0geinzq4nmowajsoagiwage&form=anab01&pc=u531&adlt=strict
 
+Scaffold-DbContext "Data Source=TRNG6076;Initial Catalog=StudentDB;Persist Security Info=True;User ID=sa;Password=cybage@123456;Encrypt=False;Trust Server Certificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
 
 CREATE TABLE [dbo].[Student](
 	[id] [int] NOT NULL,
