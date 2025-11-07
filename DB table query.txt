@@ -2,6 +2,8 @@ https://www.bing.com/search?qs=nm&pq=scaffold-dbcontext+for+sqli&sk=csyn1&sc=2-2
 
 Scaffold-DbContext "Data Source=TRNG6076;Initial Catalog=StudentDB;Persist Security Info=True;User ID=sa;Password=cybage@123456;Encrypt=False;Trust Server Certificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
 
+Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False
+
 CREATE TABLE [dbo].[Student](
 	[id] [int] NOT NULL,
 	[name] [varchar](100) NULL,
@@ -128,3 +130,27 @@ VALUES
 (1, 'token_john_123', DATEADD(DAY, 7, GETDATE()), 0),
 (2, 'token_jane_456', DATEADD(DAY, 7, GETDATE()), 0),
 (3, 'token_admin_789', DATEADD(DAY, 30, GETDATE()), 0);
+
+INSERT INTO [dbo].[Student] ([id], [name], [age])
+VALUES
+(1, 'Alice', 20),
+(2, 'Bob', 22),
+(3, 'Charlie', 21),
+(4, 'David', 23),
+(5, 'Eva', 20),
+(6, 'Frank', 24),
+(7, 'Grace', 22),
+(8, 'Hannah', 21),
+(9, 'Ian', 23),
+(10, 'Julia', 20),
+(11, 'Kevin', 22),
+(12, 'Laura', 21),
+(13, 'Mike', 23),
+(14, 'Nina', 20),
+(15, 'Oscar', 24),
+(16, 'Pam', 22),
+(17, 'Quinn', 21),
+(18, 'Rachel', 23),
+(19, 'Steve', 20),
+(20, 'Tina', 22);
+

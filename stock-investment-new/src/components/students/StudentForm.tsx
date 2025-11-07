@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { TextField, Button, Card, CardContent, Typography } from '@mui/material';
-import { createStudent, updateStudent } from '../services/studentservices';
-import type { Student } from '../models/Student';
+import { createStudent, updateStudent } from '../../services/studentservices';
+import type { Student } from '../../models/Student';
 
 interface Props {
   studentToEdit?: Student;

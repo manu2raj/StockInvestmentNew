@@ -13,9 +13,9 @@ namespace StockInvestmentNew.Controllers
     [ApiController]
     public class WatchlistsController : ControllerBase
     {
-        private readonly StockMarketContext _context;
+        private readonly StockInvestmentContext _context;
 
-        public WatchlistsController(StockMarketContext context)
+        public WatchlistsController(StockInvestmentContext context)
         {
             _context = context;
         }

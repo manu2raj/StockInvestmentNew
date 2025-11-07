@@ -10,8 +10,8 @@ namespace StockInvestmentNew.Controllers
     [ApiController]
     public class RegistrationLogin : ControllerBase
     {
-        private readonly StockMarketContext _context;
-        public RegistrationLogin(StockMarketContext context)
+        private readonly StockInvestmentContext _context;
+        public RegistrationLogin(StockInvestmentContext context)
         {
             _context = context;
         }

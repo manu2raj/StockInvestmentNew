@@ -13,9 +13,9 @@ namespace StockInvestmentNew.Controllers
     [ApiController]
     public class UserHoldingsController : ControllerBase
     {
-        private readonly StockMarketContext _context;
+        private readonly StockInvestmentContext _context;
 
-        public UserHoldingsController(StockMarketContext context)
+        public UserHoldingsController(StockInvestmentContext context)
         {
             _context = context;
         }

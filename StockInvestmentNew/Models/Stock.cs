@@ -1,4 +1,7 @@
-﻿namespace StockInvestmentNew.Models;
+﻿using System;
+using System.Collections.Generic;
+
+namespace StockInvestmentNew.Models;
 
 public partial class Stock
 {

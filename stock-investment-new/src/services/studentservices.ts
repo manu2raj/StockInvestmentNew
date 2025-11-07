@@ -2,7 +2,7 @@
 import axios from 'axios';
 import type { Student } from '../models/Student';
 
-const API_URL = 'https://localhost:44344/api/Students'; 
+const API_URL = 'https://localhost:44361/api/Students'; 
 
 export const getStudents = () => axios.get<Student[]>(API_URL);
 export const getStudentById = (id: number) => axios.get<Student>(`${API_URL}/${id}`);

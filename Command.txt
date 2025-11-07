@@ -1,0 +1,11 @@
+Commands
+
+========================
+Scaffold-DbContext: Scaffolding a DbContext is a process in Entity Framework Core (EF Core) that generates C# code, including a DbContext and entity classes, from an existing database. This allows developers to interact with the database using the C# code instead of writing raw SQL queries.
+
+Run below command. after creating all tables in database 
+ 
+ 
+Scaffold-DbContext "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=StockInvestment;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
+========================
+

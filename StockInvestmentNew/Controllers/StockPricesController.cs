@@ -8,9 +8,9 @@ namespace StockInvestmentNew.Controllers
     [ApiController]
     public class StockPricesController : ControllerBase
     {
-        private readonly StockMarketContext _context;
+        private readonly StockInvestmentContext _context;
 
-        public StockPricesController(StockMarketContext context)
+        public StockPricesController(StockInvestmentContext context)
         {
             _context = context;
         }

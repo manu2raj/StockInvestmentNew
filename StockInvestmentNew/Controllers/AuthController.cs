@@ -1,7 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using StockInvestmentNew.Models;
 using StockInvestmentNew.Services;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace StockInvestmentNew.Controllers
 {
@@ -11,9 +15,9 @@ namespace StockInvestmentNew.Controllers
     {
         private readonly JwtTokenService _jwtTokenService;
 
-        private readonly StockMarketContext _context;
+        private readonly StockInvestmentContext _context;
 
-        public AuthController(JwtTokenService jwtTokenService, StockMarketContext context)
+        public AuthController(JwtTokenService jwtTokenService, StockInvestmentContext context)
         {
             _jwtTokenService = jwtTokenService;
             _context = context;
@@ -52,6 +56,26 @@ namespace StockInvestmentNew.Controllers
             await _context.SaveChangesAsync();
             return Ok(new { Token = token });
         }
+
+        [HttpPost("register")]
+        public IActionResult Register(Register register)
+        {
+            var exists = _context.StudentsAlls.Any(u => u.Username == register.UserName);
+            if (exists) return BadRequest("User already exists");
+
+            var user = new StudentsAll
+            {
+                Username = register.UserName,
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(register.Password)
+            };
+
+            _context.StudentsAlls.Add(user);
+            _context.SaveChanges();
+            return Ok("User registered");
+        }
+
+       
+
     }
 
     public class LoginRequest
